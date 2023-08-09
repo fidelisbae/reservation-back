@@ -5,8 +5,14 @@ export class Reservation {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column({ type: 'varchar' })
-  date: string;
+  @Column({ type: 'int' })
+  year: number;
+
+  @Column({ type: 'int' })
+  month: number;
+
+  @Column({ type: 'int' })
+  date: number;
 
   @Column({ type: 'int' })
   hour: number;
