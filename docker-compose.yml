@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  nest-app:
+    container_name: reservation_back
+    build: .
+    ports:
+      - '4000:4000'
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    container_name: reservation_db
+    environment:
+      MYSQL_ROOT_PASSWORD: rjsgml12
+      MYSQL_DATABASE: reservation_db
+    ports:
+      - '3306:3306'
+#     volumes:
+#       - mysql_data:/var/lib/mysql
+
+# volumes:
+#   mysql_data:
