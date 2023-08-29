@@ -18,7 +18,7 @@ export class ReservationController {
     }
   }
 
-  @Post('reserve')
+  @Post('reservations')
   async reserve(@Body() input: ReserveInput) {
     try {
       const result = await this.reservationService.reserve(input);
